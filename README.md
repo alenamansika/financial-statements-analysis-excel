@@ -50,9 +50,9 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 
 ---
 
-![Financial Statements Analysis Dashboard Preview](Dashboard%20.jpeg)
+![Financial Statements Analysis Dashboard Preview](Dashboard%20image.jpeg)
 
-📄 **[Download / Lihat Dashboard versi PDF Beresolusi Tinggi](./Financial%20Dashboard.pdf)** *(Hapus baris ini jika tidak ada file PDF)*
+📄 **[Download / Lihat Dashboard versi PDF Beresolusi Tinggi](./Financial%20Dashboard%20PDF.pdf)**
 
 ---
 
