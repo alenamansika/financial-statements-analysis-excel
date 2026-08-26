@@ -9,7 +9,7 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 
 ## 🗂️ Data Source & Attribution
 * **Dataset:** Financial Statements of Major Companies (2009–2023)
-* **Publisher:** Kaggle (Rishabh Srivastava)
+* **Publisher:** Kaggle (Rishabh Patil)
 * **Link Source:** [Kaggle - Financial Statements of Major Companies (2009-2023)](https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023/data)
 
 ---
