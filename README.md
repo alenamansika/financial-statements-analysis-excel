@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 Proyek ini menganalisis data historis Laporan Keuangan (*Financial Statements*) dari 12 perusahaan multinasional raksasa periode **2009–2023** (161 baris data transaksi) serta membangun **Executive Financial Performance Dashboard** yang terstruktur, otomatis, dan interaktif menggunakan Microsoft Excel.
 
-Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net Income*, *Market Cap*), membedah alur pembentukan laba bersih melalui *Profit Bridge Waterfall Chart*, memetakan kinerja per sektor industri, serta menyajikan perbandingan performa antar-perusahaan secara presisi.
+Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net Income*, dan *Net Profit Margin*) pada Kartu KPI, membedah alur pembentukan laba bersih melalui *Profit Bridge Waterfall Chart*, memetakan tren pertumbuhan keuangan 15 tahun (2009–2023), memetakan kontribusi kinerja per sektor industri, serta menyajikan perbandingan performa antar-perusahaan secara presisi
 
 ---
 
