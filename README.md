@@ -17,7 +17,9 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 ## 🛠️ Excel Features & Techniques Used
 
 * **Data Cleaning & Standardisation:**
-  * **Unit Scale Verification & Precision Alignment:** Memastikan bahwa header `Market Cap(in B USD)` secara eksplisit tertulis dalam skala *Billion USD ($B)*, sedangkan indikator `Revenue`, `Gross Profit`, dan `Net Income` merupakan nilai nominal murni tanpa label jutaan murni.
+  * **Text to Columns Parsing:** Mengubah dan memisahkan struktur data mentah format CSV menjadi kolom-kolom terpisah yang terstruktur sesuai variabel laporan keuangan.
+  * **Missing Value Handling & Median Imputation:** Melakukan inspeksi keberadaan sel kosong (*blank cells*) pada data keuangan dan menerapkan penanganan nilai hilang dengan mengisikan nilai median berdasarkan kelompoknya (*group median imputation*) untuk menjaga integritas dan distribusi data.
+  * **Data Transformation & Unit Scale Verification:** Memastikan tipe data tiap kolom valid serta memverifikasi bahwa header `Market Cap(in B USD)` tertulis dalam skala *Billion USD ($B)*, sementara indikator `Revenue`, `Gross Profit`, dan `Net Income` merupakan nilai nominal murni.
   * **Custom Number Formatting:** Menerapkan pemformatan kustom presisi (`$#,##0;-$#,##0;"-"`) pada Pivot Table dan (`$#,##0,"K"`) pada sumbu chart agar pembagian angka ribuan/jutaan tidak mengerosi kerugian nyata perusahaan (seperti PCG Net Income `-$3,985`) menjadi `$0`.
 * **Data Staging Architecture & Dynamic Slicers:**
   * **Dedicated Staging Sheet (`Staging KPI`):** Memisahkan area logika *backend* dan 5 Pivot Tables dari lembar kerja tampilan utama untuk menjaga kestabilan *file* dan struktur pengolahan data.
