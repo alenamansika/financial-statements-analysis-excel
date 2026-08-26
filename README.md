@@ -31,7 +31,6 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
   * **Clean Executive Dark Layout:** Menyusun tata letak *Clean Dark Dashboard* (`#1E293B`) yang simetris dan pas dalam 1 layar *view* tanpa mengorbankan keterbacaan data.
 
 ---
-
 ## 📈 Interactive Dashboard Showcase
 
 ### 1. Executive Profit Bridge Waterfall (USD)
@@ -52,6 +51,8 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 
 ---
 
+![Financial Statements Analysis Dashboard Preview](Financial%20Dashboard%20Image.jpeg)
+
 📄 **[Download / Lihat Dashboard versi PDF Beresolusi Tinggi](./Financial%20Dashboard%20PDF.pdf)**
 
 ---
@@ -63,11 +64,10 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 * **`Data Cleaning`** : Sheet tempat pengolahan data awal, verifikasi tipe data sel, dan penyesuaian format angka.
 * **`Staging KPI`** : Sheet *backend logic* yang memuat 5 Pivot Tables interaktif dan kalkulasi *Waterfall Chart Link*.
 * **`Dashboard`** : Sheet tampilan utama (*User Interface*) berisi KPI Scorecards, Slicers interaktif, Profit Bridge Waterfall Chart, Combo Trend Chart, dan Bar Charts.
-* 📝 **Medium Article:** [Link Medium Kamu Akan Ditaruh Di Sini]
+* 📝 **Medium Article:** [https://medium.com/@alenamansika723/building-an-executive-financial-performance-dashboard-analyzing-15-year-profitability-of-major-b0c8ea508362?postPublishedType=initial]
 
 ---
 
 ## 👤 Author
-- **Name:** Alena Mansika
 - **GitHub:** [@alenamansika](https://github.com/alenamansika)
 - **LinkedIn:** [LinkedIn Alena Mansika](https://www.linkedin.com/in/alenamansika)
