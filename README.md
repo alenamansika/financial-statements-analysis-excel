@@ -42,13 +42,13 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 
 ### 2. Company Performance & Industry Category Breakdown
 *Horizontal Bar Charts* yang memetakan perbandingan *Revenue* vs *Net Income* antar-perusahaan serta kontribusi performa berdasarkan 8 sektor industri.
-* **Key Insight:** Sektor **IT** memimpin kontribusi pendapatan secara mutlak ($6,160,362), disusul oleh **LOGI** ($2,635,460) dan **Bank** ($1,342,742). **Apple (AAPL)** memimpin sebagai perusahaan paling menguntungkan dengan *Revenue* $2,965,609 dan *Net Income* $680,563. Sebaliknya, **PG&E (PCG)** dan **Sears Holdings (SHLDQ)** mencatatkan *Net Income* akumulatif negatif (rugi bersih masing-masing -$3,985 dan -$10,429).
+* **Key Insight:** Sektor **IT** memimpin kontribusi pendapatan secara mutlak sebesar **$6,189,902** dengan *Net Income* **$1,514,327**, disusul oleh **LOGI** ($2,635,460) dan **Bank** ($1,342,743). **Apple (AAPL)** memimpin sebagai perusahaan paling menguntungkan dengan *Revenue* **$2,965,609** dan *Net Income* **$680,563**. Sebaliknya, sektor **Manufacturing / PCG** (-$3,985) dan sektor **Finance / SHLDQ** (-$10,429) mencatatkan akumulasi *Net Income* negatif.
 
 ---
 
 ### 3. Multi-Year Financial Growth Trend (2009–2023)
 *Combo Line & Column Chart* deret waktu yang melacak laju pertumbuhan pendapatan dan laba bersih selama periode 15 tahun.
-* **Key Insight:** Terjadi lonjakan akselerasi pertumbuhan *Revenue* dan *Net Income* yang sangat tajam pada periode 2020–2022 akibat akselerasi digitalisasi global pasca-pandemi, sebelum mengalami penyesuaian/koreksi pada tahun 2023.
+* **Key Insight:** Terjadi akselerasi pertumbuhan yang sangat signifikan menuju masa puncak pandemi, di mana **Net Income tertinggi dicapai pada tahun 2021 ($319,285)** dan **Revenue tertinggi dicapai pada tahun 2022 ($1,639,071)**, sebelum mengalami koreksi penyesuaian pasar pada tahun 2023 ($238,889 Revenue / $76,729 Net Income).
 
 ---
 
