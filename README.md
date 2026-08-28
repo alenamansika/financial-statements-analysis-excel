@@ -155,7 +155,6 @@ Hasil ini menunjukkan bahwa Revenue dan Net Income tidak mencapai nilai tertingg
 # 🎯 Project Takeaways
 
 Melalui proyek ini, saya belajar dan berlatih mengubah data keuangan menjadi analisis dan dashboard menggunakan Microsoft Excel.
-
 Proyek ini juga membantu saya memahami proses analisis data secara lebih praktis, mulai dari:
 
 **Raw Data → Data Preparation → Analysis → Visualization → Dashboard Development**
@@ -165,9 +164,6 @@ Proyek ini juga membantu saya memahami proses analisis data secara lebih praktis
 # 👤 Author
 
 **Alena Mansika**
-
-- 💻 **GitHub:** [@alenamansika](https://github.com/alenamansika)
-- 💼 **LinkedIn:** [Alena Mansika](https://www.linkedin.com/in/alenamansika)
 
 - 💻 **GitHub:** [@alenamansika](https://github.com/alenamansika)
 - 💼 **LinkedIn:** [Alena Mansika](https://www.linkedin.com/in/alenamansika)
