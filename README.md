@@ -64,8 +64,6 @@ Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net I
 * **`Data Cleaning`** : Sheet tempat pengolahan data awal, verifikasi tipe data sel, dan penyesuaian format angka.
 * **`Staging KPI`** : Sheet *backend logic* yang memuat 5 Pivot Tables interaktif dan kalkulasi *Waterfall Chart Link*.
 * **`Dashboard`** : Sheet tampilan utama (*User Interface*) berisi KPI Scorecards, Slicers interaktif, Profit Bridge Waterfall Chart, Combo Trend Chart, dan Bar Charts.
-* 📝 **Medium Article:** [https://medium.com/@alenamansika723/building-an-executive-financial-performance-dashboard-analyzing-15-year-profitability-of-major-b0c8ea508362?postPublishedType=initial]
-
 ---
 
 ## 👤 Author
