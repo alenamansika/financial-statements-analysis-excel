@@ -1,71 +1,169 @@
-# 📊 Financial Statements of Major Companies (2009–2023) Executive Dashboard
+# 📊 Financial Statements of Major Companies (2009–2023) Dashboard
 
 ## 📌 Project Overview
-Proyek ini menganalisis data historis Laporan Keuangan (*Financial Statements*) dari 12 perusahaan multinasional raksasa periode **2009–2023** (161 baris data transaksi) serta membangun **Executive Financial Performance Dashboard** yang terstruktur, otomatis, dan interaktif menggunakan Microsoft Excel.
 
-Analisis ini melacak indikator keuangan utama (*Revenue*, *Gross Profit*, *Net Income*, dan *Net Profit Margin*) pada Kartu KPI, membedah alur pembentukan laba bersih melalui *Profit Bridge Waterfall Chart*, memetakan tren pertumbuhan keuangan 15 tahun (2009–2023), memetakan kontribusi kinerja per sektor industri, serta menyajikan perbandingan performa antar-perusahaan secara presisi
+Proyek ini menganalisis data historis laporan keuangan dari **12 perusahaan** selama periode **2009–2023**, yang terdiri dari **161 records**, serta membangun dashboard keuangan interaktif menggunakan **Microsoft Excel**.
 
----
-
-## 🗂️ Data Source & Attribution
-* **Dataset:** Financial Statements of Major Companies (2009–2023)
-* **Publisher:** Kaggle (Rishabh Patil)
-* **Link Source:** [Kaggle - Financial Statements of Major Companies (2009-2023)](https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023/data)
+Analisis berfokus pada beberapa indikator keuangan utama, termasuk **Revenue, Gross Profit, Net Income, dan Net Profit Margin**. Dashboard digunakan untuk mengeksplorasi kinerja perusahaan, membandingkan kategori industri, serta melihat perubahan Revenue dan Net Income dari waktu ke waktu.
 
 ---
 
-## 🛠️ Excel Features & Techniques Used
+## 🗂️ Dataset
 
-* **Data Cleaning & Standardisation:**
-  * **Text to Columns Parsing:** Mengubah dan memisahkan struktur data mentah format CSV menjadi kolom-kolom terpisah yang terstruktur sesuai variabel laporan keuangan.
-  * **Missing Value Handling & Median Imputation:** Melakukan inspeksi keberadaan sel kosong (*blank cells*) pada data keuangan dan menerapkan penanganan nilai hilang dengan mengisikan nilai median berdasarkan kelompoknya (*group median imputation*) untuk menjaga integritas dan distribusi data.
-  * **Data Transformation & Unit Scale Verification:** Memastikan tipe data tiap kolom valid serta memverifikasi bahwa header `Market Cap(in B USD)` tertulis dalam skala *Billion USD ($B)*, sementara indikator `Revenue`, `Gross Profit`, dan `Net Income` merupakan nilai nominal murni.
-  * **Custom Number Formatting:** Menerapkan pemformatan kustom presisi (`$#,##0;-$#,##0;"-"`) pada Pivot Table dan (`$#,##0,"K"`) pada sumbu chart agar pembagian angka ribuan/jutaan tidak mengerosi kerugian nyata perusahaan (seperti PCG Net Income `-$3,985`) menjadi `$0`.
-* **Data Staging Architecture & Dynamic Slicers:**
-  * **Dedicated Staging Sheet (`Staging KPI`):** Memisahkan area logika *backend* dan 5 Pivot Tables dari lembar kerja tampilan utama untuk menjaga kestabilan *file* dan struktur pengolahan data.
-  * **Single-Click Dynamic Slicers (`Report Connections`):** Menghubungkan **Slicer Year**, **Slicer Company**, dan **Slicer Category** secara eksplisit ke seluruh Pivot Table. Mematikan fitur *Multi-Select* (`Alt + S`) serta mengaktifkan *Slicer Settings* `Hide items with no data` untuk pengalaman navigasi yang intuitif dan responsif.
-* **Advanced Visualizations & UI/UX Design:**
-  * **Profit Bridge Waterfall Chart:** Merancang grafik *Waterfall* dari tabel perantara (*Staging Link*) dengan memberikan nilai negatif pada pengurang biaya (*COGS* & *OPEX*) serta mengkonfigurasi properti *Set as Total* pada pilar `Revenue`, `Gross Profit`, dan `Net Income`.
-  * **Company Performance Bar Chart:** Memetakan 12 perusahaan secara hierarkis dari kontributor pendapatan terbesar hingga terkecil dengan label nilai yang disesuaikan.
-  * **Multi-Year Trend Combo Chart:** Mengintegrasikan grafik batang vertikal (*Revenue*) dengan grafik garis (*Net Income*) untuk melacak tren pertumbuhan keuangan 15 tahun.
-  * **Clean Executive Dark Layout:** Menyusun tata letak *Clean Dark Dashboard* (`#1E293B`) yang simetris dan pas dalam 1 layar *view* tanpa mengorbankan keterbacaan data.
+- **Dataset:** Financial Statements of Major Companies (2009–2023)
+- **Source:** Kaggle
+- **Publisher:** Rishabh Patil
+- **Period:** 2009–2023
+- **Records:** 161
+- **Companies:** 12
 
----
-## 📈 Interactive Dashboard Showcase
-
-### 1. Executive Profit Bridge Waterfall (USD)
-*Waterfall Chart* yang membedah alur pembentukan laba bersih dari total pendapatan (*Revenue*) dikurangi Harga Pokok Penjualan (*COGS*) menghasilkan *Gross Profit*, kemudian dikurangi Beban Operasional & Pajak (*OPEX_Other*) hingga menyisakan *Net Income*.
-* **Key Insight:** Dari akumulasi *Total Revenue* sebesar **$12,213,879**, perusahaan menghabiskan **$6,195,141** untuk *COGS* (50.7%) dan **$4,042,204** untuk *OPEX_Other* (33.1%), sehingga menyisakan akumulasi *Net Income* bersih sebesar **$1,976,534** dengan *Net Profit Margin* rata-rata sebesar **13.7%**.
+📎 **Dataset Source:**  
+[Financial Statements of Major Companies (2009–2023) – Kaggle](https://www.kaggle.com/datasets/rish59/financial-statements-of-major-companies2009-2023/data)
 
 ---
 
-### 2. Company Performance & Industry Category Breakdown
-*Horizontal Bar Charts* yang memetakan perbandingan *Revenue* vs *Net Income* antar-perusahaan serta kontribusi performa berdasarkan 8 sektor industri.
-* **Key Insight:** Sektor **IT** memimpin kontribusi pendapatan secara mutlak sebesar **$6,189,902** dengan *Net Income* **$1,514,327**, disusul oleh **LOGI** ($2,635,460) dan **Bank** ($1,342,743). **Apple (AAPL)** memimpin sebagai perusahaan paling menguntungkan dengan *Revenue* **$2,965,609** dan *Net Income* **$680,563**. Sebaliknya, sektor **Manufacturing / PCG** (-$3,985) dan sektor **Finance / SHLDQ** (-$10,429) mencatatkan akumulasi *Net Income* negatif.
+## 🛠️ Data Preparation & Analysis
+
+The following steps were performed during this project:
+
+### Data Preparation
+
+- Parsed raw CSV data using **Text to Columns**
+- Reviewed blank and missing values
+- Applied median imputation where required
+- Verified data types and measurement units
+- Applied custom number formatting for financial values
+
+### Analysis & Excel Features
+
+- Created supporting financial metrics, including **COGS, OPEX/Other Expenses, and Net Profit Margin**
+- Built supporting **PivotTables**
+- Created interactive **Slicers** for Year, Company, and Category
+- Developed KPI summaries
+- Built a **Waterfall Chart** to visualize the profit breakdown
+- Created company and industry performance comparisons
+- Analyzed Revenue and Net Income trends from 2009 to 2023
 
 ---
 
-### 3. Multi-Year Financial Growth Trend (2009–2023)
-*Combo Line & Column Chart* deret waktu yang melacak laju pertumbuhan pendapatan dan laba bersih selama periode 15 tahun.
-* **Key Insight:** Terjadi akselerasi pertumbuhan yang sangat signifikan menuju masa puncak pandemi, di mana **Net Income tertinggi dicapai pada tahun 2021 ($319,285)** dan **Revenue tertinggi dicapai pada tahun 2022 ($1,639,071)**, sebelum mengalami koreksi penyesuaian pasar pada tahun 2023 ($238,889 Revenue / $76,729 Net Income).
+# 📈 Dashboard Highlights & Key Insights
+
+## 1️⃣ Profit Breakdown
+
+The Profit Bridge Waterfall Chart visualizes the relationship between:
+
+**Revenue → COGS → Gross Profit → OPEX/Other Expenses → Net Income**
+
+### 🔍 Key Insight
+
+Based on the aggregated data:
+
+- **Total Revenue:** $12,213,879
+- **COGS:** $6,195,141 (50.7%)
+- **OPEX/Other Expenses:** $4,042,204 (33.1%)
+- **Total Net Income:** $1,976,534
+- **Net Profit Margin:** 13.7%
+
+The visualization provides a summary of how the financial components are represented within the aggregated dataset.
 
 ---
+
+## 2️⃣ Company & Industry Performance
+
+The dashboard compares **Revenue and Net Income** across companies and industry categories.
+
+### 🔍 Key Insight
+
+Based on the available dataset:
+
+- The **IT category** recorded the highest aggregated Revenue at **$6,189,902**
+- The IT category also recorded the highest aggregated Net Income at **$1,514,327**
+- **Apple (AAPL)** recorded the highest aggregated Revenue at **$2,965,609**
+- Apple also recorded the highest aggregated Net Income at **$680,563**
+
+Some companies in the dataset recorded negative aggregated Net Income during the analysis period, including:
+
+- **PCG:** -$3,985
+- **SHLDQ:** -$10,429
+
+> **Note:** These findings are based on the companies and historical records available in the dataset and should not be interpreted as a representation of the current financial condition of the companies or industries.
+
+---
+
+## 3️⃣ Multi-Year Financial Trend (2009–2023)
+
+A Combo Chart was used to compare changes in **Revenue and Net Income** over the available historical period.
+
+### 🔍 Key Insight
+
+Based on the data:
+
+- The highest **Net Income** was recorded in **2021** at **$319,285**
+- The highest **Revenue** was recorded in **2022** at **$1,639,071**
+
+The results show that Revenue and Net Income did not reach their highest values in the same year.
+
+---
+
+# 🖼️ Dashboard Preview
 
 ![Financial Statements Analysis Dashboard Preview](Financial%20Dashboard%20Image.jpeg)
 
-📄 **[Download / Lihat Dashboard versi PDF Beresolusi Tinggi](./Financial%20Dashboard%20PDF.pdf)**
+📄 **[View Full Dashboard in High-Resolution PDF](./Financial%20Dashboard%20PDF.pdf)**
 
 ---
 
-## 📁 Repository Structure
+# 📁 Workbook Structure
 
-* `Financial_Statements_Analysis_Dashboard.xlsx` : File kerja utama Excel.
-* **`Financial Data`** : Sheet data mentah (*raw data*) laporan keuangan 12 perusahaan dari Kaggle.
-* **`Data Cleaning`** : Sheet tempat pengolahan data awal, verifikasi tipe data sel, dan penyesuaian format angka.
-* **`Staging KPI`** : Sheet *backend logic* yang memuat 5 Pivot Tables interaktif dan kalkulasi *Waterfall Chart Link*.
-* **`Dashboard`** : Sheet tampilan utama (*User Interface*) berisi KPI Scorecards, Slicers interaktif, Profit Bridge Waterfall Chart, Combo Trend Chart, dan Bar Charts.
+The Excel workbook is organized into the following sheets:
+
+| Sheet | Description |
+|---|---|
+| **Financial Data** | Raw financial dataset used for the analysis |
+| **Data Cleaning** | Data preparation, cleaning, and formatting process |
+| **Staging KPI** | Supporting PivotTables and calculations used for the dashboard |
+| **Dashboard** | Final interactive dashboard containing KPIs, charts, and slicers |
+
+### 📄 Main File
+
+`Financial_Statements_Analysis_Dashboard.xlsx`
+
 ---
 
-## 👤 Author
-- **GitHub:** [@alenamansika](https://github.com/alenamansika)
-- **LinkedIn:** [LinkedIn Alena Mansika](https://www.linkedin.com/in/alenamansika)
+# 🧰 Tools & Skills Demonstrated
+
+**Tool:** Microsoft Excel
+
+**Skills & Techniques:**
+
+- Data Cleaning
+- Missing Value Handling
+- Data Preparation
+- Data Transformation
+- Financial Metric Calculation
+- PivotTables
+- PivotCharts
+- Interactive Slicers
+- Data Visualization
+- Waterfall Charts
+- Trend Analysis
+- Dashboard Development
+
+---
+
+# 🎯 Project Takeaways
+
+Through this project, I practiced transforming raw financial data into a structured analysis and interactive dashboard using Microsoft Excel.
+
+This project helped me strengthen my understanding of:
+
+**Raw Data → Data Preparation → Analysis → Visualization → Dashboard Development**
+
+---
+
+# 👤 Author
+
+**Alena Mansika**
+
+- 💻 **GitHub:** [@alenamansika](https://github.com/alenamansika)
+- 💼 **LinkedIn:** [Alena Mansika](https://www.linkedin.com/in/alenamansika)
